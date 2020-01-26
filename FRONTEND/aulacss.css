@@ -1,0 +1,102 @@
+.todas{
+	background-color: #C61A1A;
+	border:solid 2px black;  /* tipo da borda, tamanho e cor */
+	width: 80%;
+	height:80%;
+	/*display: flex;  /* esse cara muda a posição do que ta dentro das divs */ 
+	/*justify-content: center;
+	align-items: center; */
+	transition: width 1s, height 1s, border-radius 2s;
+	border-radius:20px;
+	transition-timing-function: ease-in-out;
+	
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(2,50%);
+	grid-template-rows: repeat(2,50%);
+	width: 100%;
+	height:100%;
+	background-color:black; /* pra isso funcionar, tenho que colocar a mesma coisa >>>(width, height) no .todas só que reduzido, pra poder enxergar o background */
+	justify-items:center; /* alinha no centro pela horizontal */
+	align-items:center; /* alinha no centro pela vertical */
+	font-family: 'Montserrat Alternates', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	font-weight: italic; /* ?? */
+	/* place-items:center; ( alinha horizontalmente e verticalmente ao mesmo tempo )
+	position:relative; */
+}
+
+#serie-1{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.todas:hover{
+	width: 100%;
+	height:100%;
+}
+
+.navbar{
+  overflow: hidden;
+  background-color: #C61A1A;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  /* padding: 14px 20px; */
+  text-decoration: none;
+}
+
+.navelement{
+	text-decoration: none;
+	margin: 30px;
+	font-family: 'Ropa Sans', sans-serif;
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+
+}
+
+.title{
+	background-color: black;
+	color: #C61A1A;
+	text-align: center;
+	margin-top: 50;
+	font-size: 50px;
+}
+
+body{
+	background-color: black;
+	width:100%;
+	height:100%;
+}
+
+.text{
+	color: white;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.text1{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+
+@media(max-width:600px){
+	.container{
+		display:flex;
+	    flex-direction: column;
+	    justify-content:flex-start;
+	}
+}
